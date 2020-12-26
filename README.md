@@ -4,12 +4,12 @@
 ## Sample Company Database
 * asfasfasfasfasfasfa
 #### Table Name
-    * safasfa
-    * asdas
-    * asdasd
-    * asdasd
-    * asdasd
-    * asdaas
+    * Department
+    * Department_location
+    * Employee
+    * Dependant
+    * Project
+    * Works_on
 #### ERD
 ![Alt](https://github.com/Rllein1/F_database/blob/main/db.png)
 
