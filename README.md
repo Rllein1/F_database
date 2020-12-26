@@ -9,11 +9,11 @@
 
 ##Sample Query
 1.
-```
+~~~~
 sdasd
 sadasd
 asd
-```
+~~~~
 *safasfasfa
 
 2.
