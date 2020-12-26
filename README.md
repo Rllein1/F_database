@@ -26,9 +26,11 @@
 ## Sample Query
 1.
 ```
-sdasd
-sadasd
-asd
+SELECT a.ssn, a.fname,a.minit, a.lname, a.dno,b.dname as deptname, 
+COUNT(b.dname) OVER (PARTITION BY b.dname) AS member 
+FROM employee as a 
+INNER join department as b ON b.dnumber= a.dno 
+ORDER BY a.dno ASC
 ```
 * safasfasfa
 
