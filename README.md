@@ -14,6 +14,7 @@
 ![Alt](https://github.com/Rllein1/F_database/blob/main/db.png)
 
 ## Database Dependency Diagram
+![Alt](https://github.com/Rllein1/F_database/blob/main/FDD.png)
 * dagasdtatasfafs
 
 ## Sample Query
