@@ -16,13 +16,13 @@
 ## Database Dependency Diagram
 * __This image below show the functional dependecy of database.__
 ![Alt](https://github.com/Rllein1/F_database/blob/main/FDD.png)
-* FD1 Dnum  -> (Dname, mgrssn, mgrstart, Dloc.) Partial Dependency
-* FD2 ssn   ->   (Empname, ssn, bdate, add, sex, salary, Sssn, DEPname) Partial Dependency
-* FD3 DEPname   ->   (Dsex, bdate, relation) Partial Dependency
-* FD4 Pnum  ->  (Pname, Ploc.) Partial Dependency
-* FD5 Dnum, mgrssn  ->  (SssN) Fully Dependency
-* FD6 ssn, Pnum  ->  (hours) Fully Dependency
-* FD7 hours  ->  (salary) Transitive Dependency
+* __FD1__ Dnum  -> (Dname, mgrssn, mgrstart, Dloc.) Partial Dependency
+* __FD2__ ssn   ->   (Empname, ssn, bdate, add, sex, salary, Sssn, DEPname) Partial Dependency
+* __FD3__ DEPname   ->   (Dsex, bdate, relation) Partial Dependency
+* __FD4__ Pnum  ->  (Pname, Ploc.) Partial Dependency
+* __FD5__ Dnum, mgrssn  ->  (SssN) Fully Dependency
+* __FD6__ ssn, Pnum  ->  (hours) Fully Dependency
+* __FD7__ hours  ->  (salary) Transitive Dependency
 
 ## Sample Query
 1.
@@ -43,27 +43,27 @@ asd
 ```
 * safasfasfa
 
-3. Get fullname of employee using CONCAT
+3. __Get fullname of employee using CONCAT.__
 ```
 SELECT CONCAT(lname,' ',minit,' ',fname) from employee
 ```
 * safasfasfa
 
-4. to select all manager 
+4. __to select all manager.__ 
 ```
 SELECT CONCAT(em.lname,' ',em.minit,' ',em.fname) as manager,dept.dname
 FROM employee as em
 INNER JOIN department as dept on dept.mgrssn = em.ssn
 ```
 * safasfasfa
-5. Select 3 highest salary
+5. __Select 3 highest salary.__
 ```
 select salary from employee as a 
 where 3 >= (select count(salary) from employee as b where a.salary <= b.salary) 
 order by a.salary desc;
 ```
 * safasfasfa
-6. Select 3 lowest salary
+6. __Select 3 lowest salary.__
 ```
 select salary from employee as a 
 where 3 >= (select count(salary) from employee as b where a.salary >= b.salary);
