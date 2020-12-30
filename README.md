@@ -27,7 +27,7 @@
 * __FD7__ hours  ->  (salary) Transitive Dependency
 
 ## Sample Query
-1.
+1. __Select employee and partioned by department.__ 
 ```  
       SELECT a.ssn, a.fname,a.minit, a.lname, a.dno,b.dname as deptname, 
       COUNT(b.dname) OVER (PARTITION BY b.dname) AS member 
@@ -37,11 +37,12 @@
 ```
 * safasfasfa
 
-2.
+2. __Create view table for department project.__
 ```
-sdasd
-sadasd
-asd
+create view dept_proj as 
+      SELECT dep.dname as department, pro.pname as project, pro.plocation as proj_location
+      FROM department as dep
+      INNER join project as pro ON pro.dnum= dep.dnumber;
 ```
 * safasfasfa
 
