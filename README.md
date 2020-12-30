@@ -14,7 +14,7 @@
 ![Alt](https://github.com/Rllein1/F_database/blob/main/db.png)
 
 ## Database Dependency Diagram
-* __This image below show the functional dependecy of database.
+* __This image below show the functional dependecy of database.__
 ![Alt](https://github.com/Rllein1/F_database/blob/main/FDD.png)
 * FD1 Dnum  -> (Dname, mgrssn, mgrstart, Dloc.) Partial Dependency
 * FD2 ssn   ->   (Empname, ssn, bdate, add, sex, salary, Sssn, DEPname) Partial Dependency
