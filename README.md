@@ -13,11 +13,11 @@
     * Project
     * Works_on
 #### ERD
-![Alt](https://github.com/Rllein1/F_database/blob/main/db.png)
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/db.png)
 
 ## Database Dependency Diagram
 * __This image below show the functional dependecy of database.__
-![Alt](https://github.com/Rllein1/F_database/blob/main/FDD.png)
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/FDD.png)
 * __FD1__ Dnum  -> (Dname, mgrssn, mgrstart, Dloc.) Partial Dependency
 * __FD2__ ssn   ->   (Empname, ssn, bdate, add, sex, salary, Sssn, DEPname) Partial Dependency
 * __FD3__ DEPname   ->   (Dsex, bdate, relation) Partial Dependency
@@ -35,7 +35,7 @@
       INNER join department as b ON b.dnumber= a.dno 
       ORDER BY a.dno ASC
 ```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/1.png)
 
 2. __Create view table for department project.__
 ```
@@ -44,13 +44,13 @@ create view dept_proj as
       FROM department as dep
       INNER join project as pro ON pro.dnum= dep.dnumber;
 ```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/view1.png)
 
 3. __Get fullname of employee using CONCAT.__
 ```
 SELECT CONCAT(lname,' ',minit,' ',fname) from employee
 ```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/3.png)
 
 4. __to select all manager.__ 
 ```
@@ -58,45 +58,20 @@ SELECT CONCAT(em.lname,' ',em.minit,' ',em.fname) as manager,dept.dname
 FROM employee as em
 INNER JOIN department as dept on dept.mgrssn = em.ssn
 ```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/4.png)
+
 5. __Select 3 highest salary.__
 ```
 select salary from employee as a 
 where 3 >= (select count(salary) from employee as b where a.salary <= b.salary) 
 order by a.salary desc;
 ```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/5.png)
+
 6. __Select 3 lowest salary.__
 ```
 select salary from employee as a 
 where 3 >= (select count(salary) from employee as b where a.salary >= b.salary);
 ```
-* safasfasfa
-3.
-```
-sdasd
-sadasd
-asd
-```
-* safasfasfa
-3.
-```
-sdasd
-sadasd
-asd
-```
-* safasfasfa
-3.
-```
-sdasd
-sadasd
-asd
-```
-* safasfasfa
-3.
-```
-sdasd
-sadasd
-asd
-```
-* safasfasfa
+![Alt](https://github.com/Rllein1/F_database/blob/main/image/6.png)
+
